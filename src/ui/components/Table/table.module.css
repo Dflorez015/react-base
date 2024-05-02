@@ -1,0 +1,30 @@
+.table {
+    @apply w-full bg-white rounded-lg border-collapse table-fixed;
+
+    & thead {
+        @apply bg-white py-3 border-b border-t border-b-disabled border-t-disabled;
+
+        & tr {
+            .th {
+                @apply py-[10px] ps-4 text-start text-input;
+            }
+        }
+    }
+
+    & tbody {
+        min-height: 90px !important;
+
+        &>tr {
+            @apply py-1;
+
+            &>.td {
+                @apply ps-4 py-[10px];
+            }
+        }
+
+
+        &>tr:not(:last-child) {
+            @apply border-b border-b-disabled;
+        }
+    }
+}

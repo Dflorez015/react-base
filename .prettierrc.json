@@ -1,0 +1,35 @@
+{
+  "bracketSameLine": true,
+  "bracketSpacing": true,
+  "tabWidth": 2,
+  "tailwindFunctions": ["cn", "cva"],
+  "tailwindAttributes": ["containerClassName"],
+  "singleQuote": true,
+  "jsxBracketSameLine": true,
+  "jsxSingleQuote": true,
+  "printWidth": 200,
+  "editor.formatOnSave": true,
+  "semi": true,
+  "arrowParens": "avoid",
+  "tailwindConfig": "./tailwind.config.js",
+  "importOrder": [
+    "^(react/(.*)$)|^(react$)",
+    "<THIRD_PARTY_MODULES>",
+    "^(@components|@composables|@features|@assets)(/.*)$",
+    ".css$",
+    "^(@context|@utils|@services)(/.*)$",
+    "^(@hooks)(/.*)$",
+    "^(@api|@graphql|@store|@routes|@routeTree)(/.*)$",
+    "^types$",
+    "^[./]"
+  ],
+  "importOrderTypeScriptVersion": "5.4.4",
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+  "rules": {
+    "no-duplicate-imports": "error",
+    "react/react-in-jsx-scope": "off",
+    "camelcase": "error",
+    "spaced-comment": "error"
+  },
+  "plugins": ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"]
+}
