@@ -1,10 +1,11 @@
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended', 'prettier'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended-type-checked', 'plugin:react/recommended', 'plugin:react/jsx-runtime', 'plugin:react-hooks/recommended', 'prettier'],
   ignorePatterns: ['dist', '.eslintrc.cjs', '*.cjs', '*.js'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    tsconfigRootDir: __dirname,
     ecmaFeatures: {
       jsx: true,
     },
@@ -25,10 +26,20 @@ module.exports = {
     ],
     'no-unreachable': 'warn',
     '@typescript-eslint/no-unused-vars': ['error'],
+    '@typescript-eslint/array-type': [
+      'error',
+      { default: 'generic', readonly: 'generic' },
+    ],
   },
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
     'import/resolver': {
       typescript: {},
+    },
+    react: {
+      version: 'detect',
     },
   },
 };
