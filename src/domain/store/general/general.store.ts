@@ -17,7 +17,7 @@ export type IGeneralStore = IGeneral & IGeneralActions
 
 /*------------ store ------------*/
 
-export const generalStore: WithDevtoolsImmer<IGeneralStore> = (set, get) => ({
+export const generalStore: WithDevtoolsImmer<IGeneralStore> = () => ({
 
 })
 

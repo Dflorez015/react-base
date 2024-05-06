@@ -13,7 +13,7 @@ type Store<T> = {
 
 /*----------- store -----------*/
 
-export default function createCustomerStore<T>(defaultData: Partial<T> = {}) {
+export function createCustomerStore<T>(defaultData: Partial<T> = {}) {
   /**
    * create the customer store
    * @returns

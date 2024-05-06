@@ -1,5 +1,6 @@
-import { Loading } from './core';
+import { Avatar, Equis, Loading, Search } from './core';
+import { Ascendant, Descendant, PopOverMenuFilter } from './table';
 
-const Icons = { Loading: Loading };
+const Icons = { Avatar, Ascendant, Descendant, Loading, Equis, PopOverMenuFilter, Search };
 
 export default Icons;

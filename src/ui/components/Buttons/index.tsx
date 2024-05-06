@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 import Icons from '@assets/icons';
-import RenderIf from '@components/core/Conditionals';
+import { RenderIf } from '@components/core';
 import { cn } from '@utils/functions';
 import { ButtonVariants } from './variants';
 

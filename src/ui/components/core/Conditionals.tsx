@@ -1,4 +1,5 @@
 import { Children, FC } from 'react';
+import { AnimatePresence, AnimatePresenceProps } from 'framer-motion';
 
 //#region config
 
@@ -9,11 +10,12 @@ type renderIf = FC<{ condition?: boolean; children: React.ReactNode }> & {
   WhenFalse: FC<subConditionals>;
   WhenUndefined: FC<subConditionals>;
   ObjectIsEmpty: FC<subConditionals>;
+  WithAnimate: FC<{ children: React.ReactNode } & AnimatePresenceProps>;
 };
 
 //#region components
 
-const RenderIf: renderIf = ({ condition = true, children }) => {
+export const RenderIf: renderIf = ({ condition = true, children }) => {
   if (!condition) return null;
 
   /**
@@ -31,6 +33,8 @@ const RenderIf: renderIf = ({ condition = true, children }) => {
 
 RenderIf.displayName = 'RenderIf';
 
+RenderIf.WithAnimate = ({ children, ...res }) => <AnimatePresence {...res}>{children}</AnimatePresence>;
+RenderIf.WithAnimate.displayName = "WithAnimate" 
 RenderIf.WhenTrue = ({ children, condition }) => (condition ? children : null);
 RenderIf.WhenTrue.displayName = 'WhenTrue';
 RenderIf.WhenFalse = ({ children, condition }) => (!condition ? children : null);
@@ -41,5 +45,3 @@ RenderIf.ObjectIsEmpty = ({ children, condition }) => (Object.keys(condition).le
 RenderIf.ObjectIsEmpty.displayName = 'ObjectIsEmpty';
 
 const subComponentList = Object.keys(RenderIf);
-
-export default RenderIf;
