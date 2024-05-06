@@ -43,7 +43,7 @@
         "./src/utils/*"
       ],
       "@context/*": [
-        "./src/ui/context/*"
+        "./src/utils/context/*"
       ],
       "@api/*": [
         "./src/domain/api/*"
@@ -54,15 +54,12 @@
       "@store/*": [
         "./src/domain/store/*"
       ],
-      "@services/*": [
-        "./src/domain/services/*"
-      ],
       "@routes/*": [
         "./src/routes/*"
       ],
-      "@routeTree/*": [
-        "./src/routeTree.gen.ts"
-      ],
+      // "@routeTree/*": [
+      //   "./src/routeTree.gen.ts"
+      // ],
       "@src/*": [
         "./src/*"
       ],

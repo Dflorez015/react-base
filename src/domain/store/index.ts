@@ -1,0 +1,1 @@
+export { useBoundStore } from './bound.store'
