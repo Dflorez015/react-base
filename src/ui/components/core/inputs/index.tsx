@@ -20,7 +20,7 @@ export const InputError: TC<ErrorSpan> = ({ message }) => {
 export const InputSearch: TC<SearchInputProps> = ({ isSearching = true, containerClass, className, icon: children, iconClass, onCancel, ...res }) => {
   return (
     <div className={cn('relative inline-flex items-center rounded-md px-[15px] py-1', containerClass)}>
-      <Icons.Search className='mr-2' height={22} width={22} />
+      <Icons.Search className='mr-2' height={16} width={16} />
 
       <input type='search' {...res} className={cn('flex-1 bg-transparent placeholder:text-gray-400 focus:outline-none', className)} />
 
@@ -32,7 +32,7 @@ export const InputSearch: TC<SearchInputProps> = ({ isSearching = true, containe
 
           <RenderIf.WhenTrue condition={Boolean(isSearching)}>
             <div className='h-4 w-[1px] bg-slate-200' />
-            <Icons.Loading className={cn('static h-6 w-6', iconClass)} />
+            <Icons.Loading className={cn('static size-6', iconClass)} />
           </RenderIf.WhenTrue>
         </RenderIf>
       </div>

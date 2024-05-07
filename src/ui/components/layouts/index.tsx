@@ -1,7 +1,7 @@
 import { motion, Variant, Variants } from 'framer-motion';
 import Icons from '@assets/icons';
 import { RenderIf } from '@components/core';
-import { header__section, main__section } from './layout.module.css';
+import { aside__section, header__section, main__section } from './layout.module.css';
 import { cn, TC, TCchildren } from '@utils/index';
 
 //#region config
@@ -49,7 +49,7 @@ export const Avatar: TC<avatarProps> = ({ className }) => {
 // #region components
 export const AsideMenuLayout: TCchildren<asideMenuProps> = ({ children, className, active }) => {
   return (
-    <motion.nav custom={active} variants={menuVariants} className={cn('flex flex-col card', className)} initial={false} animate='animate'>
+    <motion.nav custom={active} variants={menuVariants} className={cn(aside__section, className)} initial={false} animate='animate'>
       {children}
     </motion.nav>
   );

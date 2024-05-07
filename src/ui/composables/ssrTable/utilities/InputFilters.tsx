@@ -24,7 +24,7 @@ export const TextFilter: TC<filterProps> = ({ id = '' }) => {
         callBack={value => {
           columnConfig.setFilterValue(value);
         }}
-        containerClass='py-1 px-1 mx-2 w-[150px] [&>div]:w-[38px] rounded-sm'
+        containerClass='py-1 px-1 w-[200px] [&>div]:w-[38px] rounded-sm'
         className='text-med w-full rounded-none font-medium'
         iconClass='size-3'
       />

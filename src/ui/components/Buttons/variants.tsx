@@ -1,9 +1,9 @@
 import { cva, VariantProps } from 'class-variance-authority';
 
-export const ButtonVariants = cva('', {
+export const ButtonVariants = cva('transition-colors', {
   variants: {
     variant: {
-      primary: 'bg-primary hover:bg-primary/80 text-white border-transparent',
+      primary: 'bg-primary text-white hover:bg-primary/95',
       blank: 'bg-trasparent border-none',
     },
     size: {
@@ -15,6 +15,10 @@ export const ButtonVariants = cva('', {
     display: {
       icon: 'inline-flex items-center justify-center gap-2',
     },
+  },
+  defaultVariants: {
+    variant: 'primary',
+    size: 'md',
   },
 });
 
